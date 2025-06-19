@@ -1,12 +1,11 @@
 import './App.css'
+import Header from './components/Header'
 
 function App() {
-
   return (
     <>
-       <div className="min-h-screen flex items-center justify-center bg-red-500  text-white">
-          <h1 className="text-4xl">Portfolio</h1>
-        </div>
+      <Header />
+      
     </>
   )
 }

@@ -1,2 +1,28 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+@import '@fontsource-variable/outfit';
 
+
+
+body{
+    background: linear-gradient(to bottom, #00001D 13%, #00001D 51%, #000283 100%);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Outfit Variable', sans-serif;
+}
+
+/* Animación personalizada */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Clase para usar en Tailwind */
+.slide-down {
+  animation: slideDown 0.4s ease-out forwards;
+}
