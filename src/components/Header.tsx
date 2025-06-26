@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import ButtonCta from "./ButtonCta";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,9 +39,12 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <button className="bg-[#B89F5C] hover:bg-[#d5c5a7] cursor-pointer text-black px-4 py-2 rounded-md font-semibold shadow">
-              <a href="#contact">Contacto</a>
-            </button>
+            <ButtonCta
+              text="Contacto"
+              href="#contact"
+              scroll={true}
+              className="font-semibold hover:scale-110 shadow"
+            />
           </li>
         </ul>
 
@@ -85,9 +89,12 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <button className="bg-[#B89F5C] hover:bg-[#d5c5a7] cursor-pointer text-black px-4 py-2 rounded-md font-semibold shadow">
-                <a href="#contact">Contacto</a>
-              </button>
+              <ButtonCta
+              text="Contacto"
+              href="#contact"
+              scroll={true}
+              className="font-semibold hover:scale-110 shadow"
+            />
             </li>
           </ul>
         </div>
