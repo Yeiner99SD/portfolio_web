@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full text-white py-4 px-6 z-50 bg-transparent backdrop-blur-md">
+    <header className="fixed w-full text-white py-6 px-6 z-50 bg-transparent backdrop-blur-md">
       <nav className="max-w-6xl font-medium text-[20px] mx-auto flex justify-center items-center">
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 justify-center items-center">
