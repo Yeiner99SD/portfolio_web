@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/outfit';
 
-
+html{
+  scroll-behavior: smooth;
+}
 
 body{
     background: linear-gradient(to bottom, #00001D 13%, #00001D 51%, #000283 100%);

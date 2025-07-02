@@ -19,7 +19,7 @@ const Hero = () => {
             emprendedores. Habla conmigo y has crecer tu negocio.
           </h2>
           <ButtonCta
-            text="🚀 Let's work together"
+            text="🚀 Trabajemos juntos! "
             isRoundedFull={true}
             className="hover:scale-110 shadow"
           />
@@ -55,7 +55,7 @@ const Hero = () => {
                 >
                   <img
                     src="/fotoperfil.webp"
-                    alt="Foto de Jorge Henríquez"
+                    alt="Foto de Yeiner Navarro"
                     loading="lazy"
                     width="320"
                     height="320"
@@ -68,13 +68,13 @@ const Hero = () => {
             {/* Información del perfil */}
             <div className="text-center text-white space-y-2">
               <h2 className="text-2xl font-semibold">
-                By <span className="font-bold">Jorge Henríquez</span>
+                By <span className="font-bold">Yeiner Navarro</span>
               </h2>
               <p className="text-lg text-gray-300">Desarrollador Web/Móvil</p>
             </div>
 
             {/* Redes sociales */}
-            <div className="flex space-x-6 mt-6">
+            <div className="flex space-x-6 text-2xl">
               <a
             href="https://github.com/"
             target="_blank"
@@ -123,7 +123,7 @@ const Hero = () => {
           <div className="absolute top-3 left-8 w-1 h-1 bg-white rounded-full opacity-75"></div>
 
           {/* Contenido horizontal */}
-          <div className="flex items-center space-x-4 relative z-10">
+          <div className="flex items-center justify-center space-x-4 relative z-10">
             {/* Foto pequeña */}
             <div className="flex-shrink-0">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-0.5">
@@ -136,7 +136,7 @@ const Hero = () => {
                 >
                   <img
                     src="/fotoperfil.webp"
-                    alt="Foto de Jorge Henríquez"
+                    alt="Foto de Yeiner Navarro"
                     loading="lazy"
                     width="64"
                     height="64"
@@ -149,7 +149,7 @@ const Hero = () => {
             {/* Información del perfil */}
             <div className="text-left text-white">
               <h2 className="text-lg font-semibold">
-                By <span className="font-bold">Jorge Henríquez</span>
+                By <span className="font-bold">Yeiner Navarro</span>
               </h2>
               <p className="text-sm text-gray-300">Desarrollador Web/Móvil</p>
             </div>

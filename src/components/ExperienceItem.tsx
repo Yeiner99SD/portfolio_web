@@ -14,7 +14,7 @@ const ExperienceItem = ({ date, type, title, description }: ExperienceItemProps)
          {/* PUNTO EN LA LÍNEA */}
       <span className="absolute -left-[7px] top-1 w-3 h-3 bg-white rounded-full border-2 border-[#B89F5C]" />
       {/* Icono línea */}
-      <div className="absolute left-0 top-1 pl-1.5 text-[#B89F5C]">
+      <div className="absolute left-0 top-1 pl-1.5 text-yellow-400">
         <FaBriefcase size={18} />
       </div>
 

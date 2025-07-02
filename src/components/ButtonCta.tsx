@@ -7,7 +7,7 @@ const ButtonCta = ({
   scroll = false,
 }) => {
   const baseStyle =
-    "bg-[#B89F5C] hover:bg-[#d5c5a7] text-black cursor-pointer px-4 py-2 font-medium transition duration-200";
+    "bg-yellow-400 hover:bg-[#d5c5a7] text-black cursor-pointer px-4 py-2 font-medium transition duration-200";
 
   const shape = isRoundedFull ? "rounded-full" : "rounded-md";
 
