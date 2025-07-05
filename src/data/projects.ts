@@ -1,7 +1,7 @@
 export type Technology =
   | "react"
-  | "node"
-  | "vue"
+  | "angular"
+  | "astro"
   | "tailwind"
   | "firebase";
 
@@ -18,19 +18,29 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Cryptos",
-    description: "Login de criptomonedas",
-    stack: ["react", "tailwind", "node"],
-    image: "/cryptos.png",
-    visit: "https://mi-proyecto.com",
-    code: "https://github.com/usuario/cryptos",
+    title: "Web de Calusajo",
+    description: "Pagina web para sitio de eventos y decoraciones",
+    stack: ["astro", "tailwind", ],
+    image: "/21shots_so.webp",
+    visit: "https://calusajoeventosydecoraciones.com",
+    code: "https://github.com/Yeiner99SD/Calusajo-web-oficial",
   },
   {
     id: 2,
-    title: "Dashboard",
-    description: "Panel administrativo",
-    stack: ["vue", "firebase"],
-    image: "/dashboard.png",
-    code: "https://github.com/usuario/dashboard",
+    title: "Web del Rancho Mariana ",
+    description: "Pagina de practica para un criadero de caballos",
+    stack: ["angular", "tailwind"],
+    image: "/606shots_so.webp",
+    visit: "https://criadero-rancho-mariana-web.vercel.app/home",
+    code: "https://github.com/Yeiner99SD/criadero-rancho-mariana-web",
   },
+  {
+    id: 3,
+    title: "E-commerce",  
+    description: "Tienda en línea",
+    stack: ["react",  "tailwind"],
+    image: "/ecommerce.png",
+    visit: "https://mi-proyecto-ecommerce.com",
+    code: "https://github.com/usuario/dashboard",
+  }
 ];

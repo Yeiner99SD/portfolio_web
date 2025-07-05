@@ -1,5 +1,5 @@
-import { FaGithub, FaGlobe, FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
-import { SiTailwindcss, SiFirebase } from "react-icons/si";
+import { FaGithub, FaGlobe, FaReact,  FaAngular } from "react-icons/fa";
+import { SiTailwindcss, SiFirebase, SiAstro } from "react-icons/si";
 import type { Project } from "../data/projects";
 import type { JSX } from "react";
 
@@ -10,8 +10,8 @@ interface Props {
 // mapa de tecnologías a íconos
 const techIcons: Record<Project["stack"][number], JSX.Element> = {
   react: <FaReact className="text-cyan-400 text-lg" />,
-  node: <FaNodeJs className="text-green-500 text-lg" />,
-  vue: <FaVuejs className="text-green-400 text-lg" />,
+  astro: <SiAstro className="text-white text-lg" />,
+  angular: <FaAngular className="text-red-600 text-lg" />, 
   tailwind: <SiTailwindcss className="text-sky-400 text-lg" />,
   firebase: <SiFirebase className="text-yellow-400 text-lg" />,
 };
