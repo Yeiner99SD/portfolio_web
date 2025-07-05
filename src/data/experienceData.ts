@@ -1,16 +1,16 @@
 export const experienceData = [
   {
-    date: "2024 - actually",
-    type: "Remote",
-    title: "Freelance web Developer",
+    date: "2024 - Actualidad",
+    type: "Remoto",
+    title: "Desarrollador web Freelance",
     description:
-      "I build complete websites — from design and development to deployment and SEO optimization. I support and guide small businesses and entrepreneurs through their digital transformation, helping them establish a strong and effective online presence.",
+      "Desarrollo sitios web completos: desde el diseño y desarrollo hasta el despliegue y la optimización SEO. Apoyo y guío a pequeñas empresas y emprendedores en su transformación digital, ayudándolos a establecer una presencia online sólida y efectiva.",
   },
   {
-    date: "June 2025 - December 2025",
+    date: "Junio 2025 - Actualidad",
     type: "Presencial",
-    title: "System Support",
+    title: "Soporte de Sistemas",
     description:
-      "I build complete websites — from design and development to deployment and SEO optimization. I support and guide small businesses and entrepreneurs through their digital transformation, helping them establish a strong and effective online presence.",
+      "Brindé soporte técnico y mantenimiento de sistemas informáticos, asegurando el correcto funcionamiento de los equipos y la resolución eficiente de incidencias para optimizar los procesos internos de la empresa.",
   },
 ];

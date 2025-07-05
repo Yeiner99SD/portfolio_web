@@ -9,18 +9,18 @@ interface Service {
 
 export const services: Service[] = [
   {
-    title: "Design Web",
-    description: "Modern, responsive, and tailored design for your business.",
+    title: "Diseño Web",
+    description: "Diseño moderno, responsivo y personalizado para tu negocio.",
     icon: FaPaintBrush,
   },
   {
-    title: "Deployment and SEO Optimization",
-    description: "Deploy your site online with a custom domain and optimized for search engines.",
+    title: "Despliegue y Optimización SEO",
+    description: "Publica tu sitio en línea con dominio propio y optimizado para motores de búsqueda.",
     icon: FaSearch,
   },
   {
-    title: "Web maintenance",
-    description: "Address issues or bugs on your website with a 20-day resolution guarantee.",
+    title: "Mantenimiento Web",
+    description: "Soluciona problemas o errores en tu sitio web con garantía de resolución en 20 días.",
     icon: FaTools,
   },
 ];

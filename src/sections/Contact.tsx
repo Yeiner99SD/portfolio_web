@@ -5,10 +5,10 @@ import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div id="contact" className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-3xl bg-transparent border border-white/10 rounded-lg shadow-lg p-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-2">
-          Contact me :)
+          Contáctame :)
         </h2>
         <p className="text-center text-white font-semibold text-lg">
           ¿Tienes dudas o quieres trabajar conmigo?

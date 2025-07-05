@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <section id="services" className=" py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-blue-500 text-4xl font-bold mb-12">My services</h2>
+        <h2 className="text-blue-500 text-4xl font-bold mb-12">Mis servicios</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
