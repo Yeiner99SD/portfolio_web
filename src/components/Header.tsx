@@ -35,8 +35,16 @@ const Header = () => {
         <ul className="hidden md:flex space-x-8 justify-center items-center">
           <li>
             <a
+              href="#projects"
+              className="hover:text-blue-400 transition-colors"
+            >
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a
               href="#experience"
-              className="hover:text-blue-400 transition-colors "
+              className="hover:text-blue-400 transition-colors"
             >
               Experiencia
             </a>
@@ -47,14 +55,6 @@ const Header = () => {
               className="hover:text-blue-400 transition-colors"
             >
               Servicios
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="hover:text-blue-400 transition-colors"
-            >
-              Proyectos
             </a>
           </li>
           <li>
@@ -82,6 +82,15 @@ const Header = () => {
   <ul className="flex flex-col items-center py-4 space-y-6 text-3xl">
     <li>
       <a
+        href="#projects"
+        className="hover:text-blue-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        Proyectos
+      </a>
+    </li>
+    <li>
+      <a
         href="#experience"
         className="hover:text-blue-400 transition-colors"
         onClick={toggleMenu}
@@ -96,15 +105,6 @@ const Header = () => {
         onClick={toggleMenu}
       >
         Servicios
-      </a>
-    </li>
-    <li>
-      <a
-        href="#projects"
-        className="hover:text-blue-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        Proyectos
       </a>
     </li>
     <li>

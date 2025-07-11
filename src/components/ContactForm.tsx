@@ -1,7 +1,9 @@
 import { useState } from "react";
-
+import { useEmailJS } from "../hooks/useEmailJS";
 
 const ContactForm = () => {
+  const { sendEmail, loading, error } = useEmailJS();
+  const [successMessage, setSuccessMessage] = useState("");
   const [formData, setFormData] = useState({
     nombre: "",
     telefono: "",
@@ -13,10 +15,30 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Formulario enviado:", formData);
-    //integrar EmailJs
+    try {
+      await sendEmail({
+        name: formData.nombre,
+        email: formData.correo,
+        message: `Mensaje de: ${formData.nombre}\nTeléfono: ${formData.telefono}\n\n${formData.mensaje}`,
+      });
+      
+      setSuccessMessage("¡Mensaje enviado con éxito!");
+      setFormData({
+        nombre: "",
+        telefono: "",
+        correo: "",
+        mensaje: "",
+      });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
+    } catch (err) {
+      console.error("Error al enviar el email:", err);
+    }
   };
 
   return (
@@ -62,10 +84,25 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-yellow-400 hover:bg-yellow-500 transition-all text-black font-semibold py-2 px-4 rounded-md"
+        disabled={loading}
+        className={`w-full bg-yellow-400 hover:bg-yellow-500 transition-all text-black font-semibold py-2 px-4 rounded-md ${
+          loading ? 'opacity-50 cursor-not-allowed' : ''
+        }`}
       >
-        Enviar
+        {loading ? 'Enviando...' : 'Enviar'}
       </button>
+
+      {error && (
+        <div className="mt-4 text-red-500 text-center">
+          {error}
+        </div>
+      )}
+
+      {successMessage && (
+        <div className="mt-4 text-green-500 text-center">
+          {successMessage}
+        </div>
+      )}
     </form>
   );
 };
