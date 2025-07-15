@@ -3,7 +3,9 @@ export type Technology =
   | "angular"
   | "astro"
   | "tailwind"
-  | "firebase";
+  | "springboot"
+  | "firebase"
+  | "sql";
 
 export interface Project {
   id: number;
@@ -36,11 +38,10 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "E-commerce",  
-    description: "Tienda en línea",
-    stack: ["react",  "tailwind"],
-    image: "/ecommerce.png",
-    visit: "https://mi-proyecto-ecommerce.com",
-    code: "https://github.com/usuario/dashboard",
+    title: "SIGESME - agendandor de citas",  
+    description: "Proyecto de gestion de citas para centros de salud",
+    stack: ["angular",  "tailwind", "springboot", "sql"],
+    image: "/725shots_so.webp",
+    code: "https://github.com/Drivas04/INNOVALIFERepository/tree/master",
   }
 ];

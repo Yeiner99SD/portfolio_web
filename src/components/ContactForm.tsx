@@ -11,7 +11,9 @@ const ContactForm = () => {
     mensaje: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -21,9 +23,10 @@ const ContactForm = () => {
       await sendEmail({
         name: formData.nombre,
         email: formData.correo,
-        message: `Mensaje de: ${formData.nombre}\nTeléfono: ${formData.telefono}\n\n${formData.mensaje}`,
+        phone: formData.telefono,
+        message: formData.mensaje,
       });
-      
+
       setSuccessMessage("¡Mensaje enviado con éxito!");
       setFormData({
         nombre: "",
@@ -31,8 +34,7 @@ const ContactForm = () => {
         correo: "",
         mensaje: "",
       });
-      
-      // Clear success message after 5 seconds
+
       setTimeout(() => {
         setSuccessMessage("");
       }, 5000);
@@ -56,10 +58,11 @@ const ContactForm = () => {
         <input
           type="text"
           name="telefono"
-          placeholder="Telefono"
+          placeholder="Teléfono"
           value={formData.telefono}
           onChange={handleChange}
           className="flex-1 p-3 rounded-md bg-[#0b0147] text-white placeholder-slate-300 outline-none"
+          required
         />
       </div>
 
@@ -86,16 +89,14 @@ const ContactForm = () => {
         type="submit"
         disabled={loading}
         className={`w-full bg-yellow-400 hover:bg-yellow-500 transition-all text-black font-semibold py-2 px-4 rounded-md ${
-          loading ? 'opacity-50 cursor-not-allowed' : ''
+          loading ? "opacity-50 cursor-not-allowed" : ""
         }`}
       >
-        {loading ? 'Enviando...' : 'Enviar'}
+        {loading ? "Enviando..." : "Enviar"}
       </button>
 
       {error && (
-        <div className="mt-4 text-red-500 text-center">
-          {error}
-        </div>
+        <div className="mt-4 text-red-500 text-center">{error}</div>
       )}
 
       {successMessage && (

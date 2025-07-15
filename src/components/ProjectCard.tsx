@@ -1,5 +1,5 @@
 import { FaGithub, FaGlobe, FaReact,  FaAngular } from "react-icons/fa";
-import { SiTailwindcss, SiFirebase, SiAstro } from "react-icons/si";
+import { SiTailwindcss, SiFirebase, SiAstro, SiSpring, SiMysql } from "react-icons/si";
 import type { Project } from "../data/projects";
 import type { JSX } from "react";
 
@@ -14,6 +14,8 @@ const techIcons: Record<Project["stack"][number], JSX.Element> = {
   angular: <FaAngular className="text-red-600 text-lg" />, 
   tailwind: <SiTailwindcss className="text-sky-400 text-lg" />,
   firebase: <SiFirebase className="text-yellow-400 text-lg" />,
+  springboot: <SiSpring className="text-orange-500 text-lg" />,
+  sql: <SiMysql className="text-blue-500 text-lg" />,
 };
 
 const ProjectCard: React.FC<Props> = ({ project }) => {

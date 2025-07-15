@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 import emailjs from '@emailjs/browser';
+
+
 
 interface EmailForm {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -17,14 +20,15 @@ export const useEmailJS = () => {
 
     try {
       const result = await emailjs.send(
-        'service_vscfm2u', // Replace with your EmailJS service ID
-        'template_41mvq3g', // Replace with your EmailJS template ID
+        'service_vscfm2u',
+        'template_41mvq3g',
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          user_name: formData.name,
+          user_email: formData.email,
+          user_phone: formData.phone,
           message: formData.message,
         },
-        'fmg9-ZyhjZMEHssLU' // Replace with your EmailJS public key
+        'fmg9-ZyhjZMEHssLU'
       );
 
       setLoading(false);
