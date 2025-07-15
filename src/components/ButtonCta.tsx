@@ -1,11 +1,23 @@
+interface ButtonCtaProps {
+  text?: string;
+  href?: string;
+  className?: string;
+  isRoundedFull?: boolean;
+  icon?: React.ReactNode;
+  scroll?: boolean;
+  target?: string;
+  rel?: string;
+}
+
 const ButtonCta = ({
   text = '',
-  href = "#",
+  href = "",
   className = "",
   isRoundedFull = false,
   icon = null,
-  scroll = false,
-}) => {
+  target,
+  rel,
+}: ButtonCtaProps) => {
   const baseStyle =
     "bg-yellow-400 hover:bg-[#d5c5a7] text-black cursor-pointer px-4 py-2 font-medium transition duration-200";
 
@@ -18,12 +30,23 @@ const ButtonCta = ({
     </>
   );
 
-  return scroll ? (
-    <a href={href} className={`${baseStyle} ${shape} ${className}`}>
+  if (href) {
+    return (
+      <a 
+        href={href} 
+        className={`${baseStyle} ${shape} ${className}`}
+        target={target}
+        rel={rel}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button className={`${baseStyle} ${shape} ${className}`}>
       {content}
-    </a>
-  ) : (
-    <button className={`${baseStyle} ${shape} ${className}`}>{content}</button>
+    </button>
   );
 };
 

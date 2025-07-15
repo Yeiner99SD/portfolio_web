@@ -26,9 +26,11 @@ const Services = () => {
           </p>
           <ButtonCta
             text="Cuentame tu idea !"
-            href="https://wa.me/573218080177?text=%C2%A1Hola!%20Te%20contacto%20desde%20tu%20portafolio.%20%C2%BFPodemos%20hablar%20sobre%20un%20posible%20proyecto%20juntos%3F"
+            href="https://api.whatsapp.com/send?phone=573218080177&text=¡Hola! Te contacto desde tu portafolio para discutir mi idea"
             isRoundedFull={true}
             className="hover:scale-110 shadow"
+            target="_blank"
+            rel="noopener noreferrer"
           />
         </div>
       </div>
